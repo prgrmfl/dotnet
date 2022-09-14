@@ -8,7 +8,20 @@ namespace HackYourFuture.DotnetMasterclass.Exercises
 
         public static void ConvertCelsiusToFahrenheit()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Please enter a the temperature in degrees Celsius: ");
+            var degreesCelsiusString = Console.ReadLine();
+
+            double tempInCelsius;
+            while (!double.TryParse(degreesCelsiusString, out tempInCelsius))
+            {
+                Console.Write("Invalid temperature. Please enter a valid decimal number: ");
+                degreesCelsiusString = Console.ReadLine();
+            }
+
+            var tempInFahrenheit = (tempInCelsius * 1.8) + 32;
+
+            Console.WriteLine($"The temperature in Fahrenheit is: {tempInFahrenheit} °F");
+            Console.ReadLine();
         }
     }
 }

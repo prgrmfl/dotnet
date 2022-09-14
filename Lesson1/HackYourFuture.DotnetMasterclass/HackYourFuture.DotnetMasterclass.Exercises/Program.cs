@@ -6,6 +6,7 @@
         static void Main(string[] args)
         {
             Exercise1.PrintTheLargestNumber();
+            Exercise1.PrintTheLargestNumberRefactored();
             Exercise2.ConvertCelsiusToFahrenheit();
             Exercise3.ReverseFirstAndLastLettersInWord();
             Exercise4.CheckIfWordHasTwoSimilarConsecutiveLetters();
