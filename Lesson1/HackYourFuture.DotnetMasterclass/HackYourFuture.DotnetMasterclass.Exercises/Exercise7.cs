@@ -6,7 +6,10 @@
         public static void AddTwoNumbersAndDivideBy3()
         {
             Console.WriteLine("Please enter a number: ");
-            var num1 = Console.ReadLine();
+            var num1 = int.Parse(Console.ReadLine());
+            var num2 = int.Parse(Console.ReadLine());
+            var sum = num1 + num2;
+            Console.WriteLine("Sum/3: " + ((float)sum / 3));
         }
     }
 }
