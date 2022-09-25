@@ -13,6 +13,11 @@ var time = new JupiterTime(14,88);      //5:28
 
 PrintTime(time);
 
+var time2 = new JupiterTime(2, 20);
+var timeInOneHour = time2.AddHours(1);
+PrintTime(timeInOneHour);
+
+
 
 static void PrintTime(JupiterTime j)
 {
@@ -66,5 +71,13 @@ class JupiterTime
     {
         Hours = hours;
         Minutes = minutes;
+    }
+
+    // add method:
+    public JupiterTime AddHours(int add)
+    {
+        var time = new JupiterTime(Hours, Minutes);
+        time.Hours += add;
+        return time;
     }
 }
