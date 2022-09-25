@@ -10,13 +10,17 @@ using System.Net.Cache;
 //var time = new JupiterTime(7,40);
 var time = new JupiterTime(14,88);      //5:28
 
-
 PrintTime(time);
 
 var time2 = new JupiterTime(2, 20);
 var timeInOneHour = time2.AddHours(1);
+
 PrintTime(timeInOneHour);
 
+var time3 = new JupiterTime(1, 21);
+var timeIn19Minutes = time3.AddMinutes(19);
+
+PrintTime(timeIn19Minutes);
 
 
 static void PrintTime(JupiterTime j)
@@ -80,4 +84,14 @@ class JupiterTime
         time.Hours += add;
         return time;
     }
+
+    // add method to add minutes:
+    public JupiterTime AddMinutes(int add)
+    {
+        var t = new JupiterTime(Hours, Minutes);
+        t.Minutes += add;
+        return t;
+    }
 }
+
+// ctrl-r-r to rename a var or param everywhere
