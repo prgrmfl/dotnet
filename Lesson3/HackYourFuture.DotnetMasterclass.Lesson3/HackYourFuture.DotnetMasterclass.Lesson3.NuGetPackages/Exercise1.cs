@@ -3,18 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Humanizer;
 
 namespace HackYourFuture.DotnetMasterclass.Lesson3.NuGetPackages
 {
     // Install the package "Humanizer" to make the following print statements human readable
     // By installing the package you can now use several overload methods to make the data more readable
-    // Check the pacakge's documentation to find out how
+    // Check the package's documentation to find out how
     public class Exercise1
     {
-        public void PrintTimestampsInHumanReadableFormat()
+        public void PrintTimestampsInHumanReadableFormat()  // static vs. nonstatic
         {
             // Print the timestamp as weeks
-            var firstTimespan = TimeSpan.FromSeconds(1123453978);
+            var firstTimespan = TimeSpan.FromSeconds(1123453978).Humanize();
             Console.WriteLine(firstTimespan);
 
             // Print this time in French words

@@ -13,8 +13,8 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.UnitTests
             return x + y;
         }
 
-        [Fact]
-        public void PassingTest()
+        [Fact] // with fact attribute, we indicate that this is a test to be executed
+        public void PassingTest()  // every test method must be public
         {
             Assert.Equal(4, Add(2, 2));
         }
@@ -36,7 +36,7 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.UnitTests
             return value % 2 == 1;
         }
 
-        [Theory]
+        [Theory]        // takes multiple items. Test 3 facts
         [InlineData(3)]
         [InlineData(5)]
         [InlineData(6)]

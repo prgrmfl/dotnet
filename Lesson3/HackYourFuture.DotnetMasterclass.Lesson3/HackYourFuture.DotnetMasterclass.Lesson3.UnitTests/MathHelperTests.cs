@@ -15,10 +15,10 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.UnitTests
             // Arrange
             var listOfInts = new List<int> { 4, 8 };
 
-            // Act
+            // Act: what we are gonna test
             var roundedAverage = MathHelper.CalculateAverageAndRoundDownToNearestInt(listOfInts);
 
-            // Assert
+            // Assert: checking if the output is correct
             Assert.Equal(6, roundedAverage);
         }
 

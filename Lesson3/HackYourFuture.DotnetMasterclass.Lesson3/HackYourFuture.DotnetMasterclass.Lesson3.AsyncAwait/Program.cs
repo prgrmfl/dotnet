@@ -4,6 +4,17 @@
     {
         static async Task Main(string[] args)
         {
+            // ask the user for poke name:
+            Console.WriteLine("Please enter a name of a pokemon");
+            var st = Console.ReadLine();
+            while (st == null)
+            {
+                st = Console.ReadLine();
+            }
+            // run pokemon getter method
+            var pokemon = await Exercise1.GetPokemon(st);
+            Console.WriteLine(pokemon);
+
             Console.WriteLine(await GetPokemonDitto());
             Console.ReadLine();
 

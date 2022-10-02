@@ -12,5 +12,14 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.AsyncAwait
     public class Exercise1
     {
         
+        public static async Task<string> GetPokemon(string s)
+        {
+            //Console.WriteLine("Please enter a name of a pokemon");
+            //var s = Console.ReadLine();
+            var httpClient = new HttpClient();
+            var res = await httpClient.GetAsync("https://pokeapi.co/api/v2/pokemon/" + s);
+
+            return await res.Content.ReadAsStringAsync();
+        }
     }
 }

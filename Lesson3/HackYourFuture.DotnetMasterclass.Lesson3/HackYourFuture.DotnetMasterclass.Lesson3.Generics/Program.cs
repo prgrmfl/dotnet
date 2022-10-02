@@ -8,6 +8,10 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.Generics
     {
         static void Main(string[] args)
         {
+            var newEx = new Exercise1();
+            newEx.Print(13, 345);
+
+
             // Knowing the data structure type at run time is faster:
 
             //generic list

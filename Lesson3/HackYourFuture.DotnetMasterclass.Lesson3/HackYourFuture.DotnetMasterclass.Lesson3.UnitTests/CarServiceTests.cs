@@ -13,8 +13,8 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.UnitTests
         public void GivenSearchTerms_WhenSearchingForACar_ThenReturnApplicableCars()
         {
             // Arrange
-            var carDatabaseMock = new Mock<ICarDatabase>();
-            var carService = new CarService(carDatabaseMock.Object);
+            var carDatabaseMock = new Mock<ICarDatabase>(); // mock means making a fake version of that class
+            var carService = new CarService(carDatabaseMock.Object); // mock creates a fake instance of car database. dummy data
 
             carDatabaseMock.Setup(x => x.GetCars()).Returns(new List<Car>
             {
@@ -26,7 +26,7 @@ namespace HackYourFuture.DotnetMasterclass.Lesson3.UnitTests
             var foundCars = carService.SearchCars(Brand.Lamborghini, 500_000, new DateTime(2023, 10, 17));
 
             // Assert
-            Assert.True(foundCars.Any());
+            Assert.True(foundCars.Count == 2);
         }
 
         [Fact]
